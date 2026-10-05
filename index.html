@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iphonectl – download</title>
+<style>
+  :root { --bg:#fff; --text:#1d1d1f; --muted:#6e6e73; --line:#e5e5ea; --accent:#0a6cff; --soft:#f5f5f7; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#161618; --text:#f2f2f4; --muted:#a1a1a8; --line:#2c2c30; --accent:#3b8bff; --soft:#1f1f22; }
+  }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+  main { max-width:680px; margin:0 auto; padding:40px 20px 60px; }
+  h1 { font-size:28px; margin:0 0 6px; letter-spacing:-0.01em; }
+  h2 { font-size:18px; margin:34px 0 8px; }
+  .lead { color:var(--muted); margin:0 0 24px; }
+  ol { padding-left:22px; } li { margin:6px 0; }
+  .box { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin:14px 0; }
+  .warn { border-color:#f0a93a; }
+  b { font-weight:600; } code { font:13px ui-monospace, Menlo, monospace; }
+  .path { white-space:nowrap; }
+  .dl { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; padding:12px 22px; border-radius:10px; margin:4px 0 10px; }
+  .dl:hover { filter:brightness(1.08); }
+  .meta { color:var(--muted); font-size:13px; margin:0 0 28px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>iphonectl</h1>
+  <p class="lead">Use your iPhone from your Mac: a live view you can click, type and scroll on, an assistant
+    you can ask to do things on the phone, and the Hinge swiping helper that learns your taste.</p>
+  <a class="dl" href="https://github.com/maximegerardin97-max/autodate/releases/latest/download/iphonectl-0.1.0.zip">Download iphonectl for Mac</a>
+  <p class="meta">Version 0.1.0 · 129 MB zip · Apple Silicon, macOS 14+</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>A Mac with Apple Silicon (M1 or later) and macOS 14 or newer.</li>
+    <li>Your iPhone and a cable to plug it into the Mac.</li>
+    <li>An Apple ID (a free one is fine) and about 15 GB of free space (for Xcode, Apple's free developer app).</li>
+  </ul>
+
+  <h2>1. Install</h2>
+  <ol>
+    <li>Unzip the download, then drag <b>iphonectl</b> into your <b>Applications</b> folder.</li>
+    <li>Open it from Applications. macOS says it can't check it for malicious software (it isn't from
+      the App Store): click <b>Done</b>.</li>
+    <li>Open <b class="path">System Settings › Privacy &amp; Security</b>, scroll down to
+      “iphonectl was blocked…”, click <b>Open Anyway</b>, enter your Mac password, then <b>Open</b>.
+      You only do this once.</li>
+  </ol>
+
+  <h2>2. Set up (the app guides you)</h2>
+  <p>A setup window checks each step by itself and moves on when it's done:</p>
+  <ol>
+    <li><b>Install Xcode</b> from the App Store (free, big download), then let the app finish its setup
+      (it asks for your Mac password once).</li>
+    <li><b>Sign in to Xcode</b> with your Apple ID: Xcode › Settings… › Accounts › +.</li>
+    <li><b>Plug in your iPhone</b>, unlock it, and tap <b>Trust</b>.</li>
+    <li><b>Turn on Developer Mode</b> on the iPhone: Settings › Privacy &amp; Security › Developer Mode.
+      It restarts; then tap Turn On.</li>
+    <li>The app <b>installs a small helper app</b> on your iPhone (a few minutes the first time). When the
+      iPhone asks, trust it: Settings › General › VPN &amp; Device Management › your Apple ID › Trust.</li>
+  </ol>
+  <p>That's it: from then on, open iphonectl with your iPhone plugged in and it connects by itself.</p>
+
+  <div class="box">
+    <b>Every 7 days</b>, Apple's free signing of the helper app runs out. iphonectl renews it on its own
+    the next time your iPhone is plugged in; if your iPhone asks you to trust it again, do.
+  </div>
+
+  <h2>Good to know</h2>
+  <ul>
+    <li><b>Privacy:</b> your phone's screen stays on your Mac, except when the assistant or the swiping
+      helper needs to decide something: then screenshots of the screens it's working on are sent to
+      Anthropic's Claude to decide. Your swiping preferences are stored only on your Mac.</li>
+    <li><b>Keep the iPhone unlocked</b> while you use it from the Mac; it can't unlock it for you.</li>
+    <li>If something stops working, the app shows what to fix at the top of the window.</li>
+  </ul>
+
+  <div class="box warn">
+    <b>Hinge and other dating apps forbid automated use</b> in their terms, and can ban accounts that
+    use it. The swiping helper's Auto mode is automation: use it at your own risk.
+  </div>
+</main>
+</body>
+</html>
